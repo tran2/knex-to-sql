@@ -1,0 +1,19 @@
+{
+  "name": "knex-to-sql",
+  "version": "1.0.0",
+  "description": "To help with debugging knex queries... as sometimes spinning up the server is too much effort",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^0.14.6",
+    "sql-formatter": "^2.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}
