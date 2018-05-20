@@ -4,9 +4,9 @@
   "description": "To help with debugging knex queries... as sometimes spinning up the server is too much effort",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode=development",
-    "watch": "webpack --watch",
-    "build": "webpack"
+    "start": "webpack-dev-server --open --config webpack-dev.config.js",
+    "watch": "webpack --watch --config webpack-dev.config.js",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "MIT",
