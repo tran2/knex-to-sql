@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width" />
     <title>Knex to SQL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css" media="all" />
+  <style>
+    #errorText {
+      color: red;
+    }
+  </style>
   </head>
   <body>
     <div class="container">
       <div class="six columns">
         <label for="knexCode">knex code</label>
-        <textarea class="u-full-width" placeholder="knex()" id="knexCode"></textarea>
-        <input class="button-primary" type="button" value="Submit" id="submitKnexCode">
+        <wired-textarea class="u-full-width" placeholder="knex()" id="knexCode" rows="4"></wired-textarea>
+        <wired-card class="u-full-width" id="errorText"></wired-card>
+        <wired-input class="button-primary" type="button" value="Submit" id="submitKnexCode">
       </div>
       <div class="six columns">
         <label for="sql">sql</label>
-        <textarea class="u-full-width" id="sql"></textarea>
+        <wired-textarea class="u-full-width" rows="4" id="sql"></wired-textarea>
       </div>
     </div>
     <script src="bundle.js" charset="utf-8"></script>

@@ -13,7 +13,8 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "knex": "^0.14.6",
-    "sql-formatter": "^2.3.1"
+    "sql-formatter": "^2.3.1",
+    "wired-elements": "^0.7.1"
   },
   "devDependencies": {
     "webpack": "^4.8.3",

@@ -2,7 +2,7 @@ var sqlFormatter = require('sql-formatter');
 var knex = require('knex')({
     client: 'pg'
 });
-
+window.knex = knex;
 function knexToSql(knexCode, type, maxUndefined) {
   var knexQuery = knexCode;
   var output = '';
@@ -12,6 +12,9 @@ function knexToSql(knexCode, type, maxUndefined) {
   }
   catch (error) {
     var undefinedVariable = getUndefinedVariable(error.message);
+    if (!undefinedVariable) {
+      throw error;
+    }
     do {
       try {
         knexQuery = 'var ' + undefinedVariable + ' = "?"; ' + knexQuery; 
@@ -39,6 +42,7 @@ function getUndefinedVariable(message) {
 function formatSQL(sql) {
   return sqlFormatter.format(sql);
 }
+
 module.exports = {
   toSQL: knexToSql,
   formatSQL: formatSQL
